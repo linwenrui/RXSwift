@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		32F40A681165E7F8BE8A9330 /* Pods_RXSwiftBasics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768D17BF28BD71E662BCDDFC /* Pods_RXSwiftBasics.framework */; };
+		4D6892652148EB2500B10987 /* ObservableIntroduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6892632148EB2500B10987 /* ObservableIntroduce.swift */; };
+		4D68926921490F2B00B10987 /* ObservableSubscibe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D68926821490F2B00B10987 /* ObservableSubscibe.swift */; };
 		4DD349EE214770FE008C3B8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD349ED214770FE008C3B8A /* AppDelegate.swift */; };
 		4DD349F0214770FE008C3B8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD349EF214770FE008C3B8A /* ViewController.swift */; };
 		4DD349F3214770FE008C3B8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DD349F1214770FE008C3B8A /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		2C978D613658EDB5B3E3499E /* Pods-RXSwiftBasics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXSwiftBasics.release.xcconfig"; path = "Pods/Target Support Files/Pods-RXSwiftBasics/Pods-RXSwiftBasics.release.xcconfig"; sourceTree = "<group>"; };
 		36E9EC20752E873DD1204D18 /* Pods-RXSwiftBasics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXSwiftBasics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RXSwiftBasics/Pods-RXSwiftBasics.debug.xcconfig"; sourceTree = "<group>"; };
+		4D6892632148EB2500B10987 /* ObservableIntroduce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableIntroduce.swift; sourceTree = "<group>"; };
+		4D68926821490F2B00B10987 /* ObservableSubscibe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableSubscibe.swift; sourceTree = "<group>"; };
 		4DD349EA214770FE008C3B8A /* RXSwiftBasics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXSwiftBasics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DD349ED214770FE008C3B8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DD349EF214770FE008C3B8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +44,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D6892622148C54400B10987 /* basics */ = {
+			isa = PBXGroup;
+			children = (
+				4D68926721490ED100B10987 /* Observable */,
+			);
+			path = basics;
+			sourceTree = "<group>";
+		};
+		4D68926721490ED100B10987 /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				4D6892632148EB2500B10987 /* ObservableIntroduce.swift */,
+				4D68926821490F2B00B10987 /* ObservableSubscibe.swift */,
+			);
+			path = Observable;
+			sourceTree = "<group>";
+		};
 		4DD349E1214770FE008C3B8A = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +85,7 @@
 				4DD349ED214770FE008C3B8A /* AppDelegate.swift */,
 				4DD349EF214770FE008C3B8A /* ViewController.swift */,
 				4DD349F1214770FE008C3B8A /* Main.storyboard */,
+				4D6892622148C54400B10987 /* basics */,
 				4DD349F421477100008C3B8A /* Assets.xcassets */,
 				4DD349F621477100008C3B8A /* LaunchScreen.storyboard */,
 				4DD349F921477100008C3B8A /* Info.plist */,
@@ -218,8 +240,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D68926921490F2B00B10987 /* ObservableSubscibe.swift in Sources */,
 				4DD349F0214770FE008C3B8A /* ViewController.swift in Sources */,
 				4DD349EE214770FE008C3B8A /* AppDelegate.swift in Sources */,
+				4D6892652148EB2500B10987 /* ObservableIntroduce.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +393,10 @@
 				DEVELOPMENT_TEAM = 25U2X7ZE8N;
 				INFOPLIST_FILE = RXSwiftBasics/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiangha.fresh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "1d8ba465-5a32-44b2-bb17-89a396cd87c0";
@@ -389,7 +416,10 @@
 				DEVELOPMENT_TEAM = 25U2X7ZE8N;
 				INFOPLIST_FILE = RXSwiftBasics/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiangha.fresh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "1d8ba465-5a32-44b2-bb17-89a396cd87c0";
